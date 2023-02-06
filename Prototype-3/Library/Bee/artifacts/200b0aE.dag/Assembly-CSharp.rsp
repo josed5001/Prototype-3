@@ -356,6 +356,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/MoveLeft.cs"
 "Assets/Scripts/PlayerControllerA.cs"
+"Assets/Scripts/RepeatBackground.cs"
 "Assets/Scripts/SpawnManagerA.cs"
 -langversion:9.0
 
