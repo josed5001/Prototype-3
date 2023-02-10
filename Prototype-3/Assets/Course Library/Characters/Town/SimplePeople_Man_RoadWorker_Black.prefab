@@ -446,8 +446,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6466748, y: 3.5227723, z: 0.8137609}
-  m_Center: {x: 0.10472894, y: 1.2613862, z: 0.004147321}
+  m_Size: {x: 1.6466748, y: 3.0079796, z: 0.8137609}
+  m_Center: {x: 0.10472894, y: 1.5187825, z: 0.004147321}
 --- !u!114 &2079596965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,7 +462,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 10
   gravityModifier: 2
+  explosionParticle: {fileID: 0}
   isOnGround: 1
+  gameOver: 0
 --- !u!1 &103786
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ public class PlayerControllerA : MonoBehaviour
     public float jumpForce = 10;
     private Animator playerAnim;
     public float gravityModifier;
+    public ParticleSystem explosionParticle;
+    public ParticleSystem dirtParticle;
     public bool isOnGround = true;
     public bool gameOver;
     // Start is called before the first frame update
@@ -27,6 +29,7 @@ public class PlayerControllerA : MonoBehaviour
             playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
             playerAnim.SetTrigger("Jump_trig");
+            dirtParticle.Stop();
         }
     }
 
@@ -36,12 +39,15 @@ public class PlayerControllerA : MonoBehaviour
         if(collision.gameObject.CompareTag("Grounde"))
         {
             isOnGround = true;
+            dirtParticle.Play();
         }   else if (collision.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("Failure");
             gameOver = true;
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
+            explosionParticle.Play();
+            dirtParticle.Stop();
         }
     }
 
